@@ -1,89 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arabesque Pub</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- الشريط العلوي -->
-    <header>
-        <h1>Arabesque Pub</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-                <li><a href="#complaints">تقديم شكوى</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>مرحباً بكم في Arabesque Pub</h1>
+    <p>هذه الصفحة مخصصة لخدماتنا.</p>
 
-    <!-- قسم الرئيسية -->
-    <section id="home">
-        <h2>وكالة إعلانات واتصال متكاملة</h2>
-        <p>نحن في Arabesque Pub نقدم حلولاً مبتكرة ومخصصة لتلبية احتياجات عملائنا.</p>
-    </section>
+    <h2>تقديم الشكاوى</h2>
+    <form id="complaintForm">
+        <label for="name">اسم المشتكي:</label>
+        <input type="text" id="name" required><br>
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" required><br>
+        <label for="reason">سبب الشكوى:</label>
+        <textarea id="reason" required></textarea><br>
+        <button type="submit">إرسال الشكوى</button>
+    </form>
+    
+    <div id="confirmation" style="display:none;">
+        <p>شكراً لتقديم البلاغ! سنكون أكثر احترافية.</p>
+    </div>
 
-    <!-- قسم الخدمات -->
-    <section id="services">
-        <h3>خدماتنا</h3>
-        <div class="service-list">
-            <button onclick="showServiceDescription(1)">حروف LED إشهارية</button>
-            <button onclick="showServiceDescription(2)">شاشات LED DISPLAY</button>
-            <button onclick="showServiceDescription(3)">تغليف الواجهات والمحلات</button>
-            <button onclick="showServiceDescription(4)">ديكور المنازل والمحلات</button>
-            <button onclick="showServiceDescription(5)">لافتات إشهارية</button>
-            <button onclick="showServiceDescription(6)">تغليف السيارات</button>
-            <button onclick="showServiceDescription(7)">الطباعة على مختلف المواد</button>
-            <button onclick="showServiceDescription(8)">مونتاج الفيديوهات</button>
-            <button onclick="showServiceDescription(9)">إنشاء المواقع</button>
-            <button onclick="showServiceDescription(10)">استيراد الآلات الصناعية</button>
-            <button onclick="showServiceDescription(11)">LED NEON</button>
-        </div>
-        <div id="service-description"></div>
-    </section>
-
-    <!-- قسم من نحن -->
-    <section id="about">
-        <h3>من نحن</h3>
-        <p>نحن فريق محترف يسعى إلى تقديم أفضل خدمات الإعلانات والتواصل، لنساعد عملاءنا في تحقيق نجاح ملحوظ في السوق. نتميز بالإبداع والاحترافية في كل ما نقدمه.</p>
-    </section>
-
-    <!-- قسم اتصل بنا -->
-    <section id="contact">
-        <h3>اتصل بنا</h3>
-        <p>البريد الإلكتروني: <a href="mailto:benouapub@gmail.com">benouapub@gmail.com</a></p>
-        <p>الهاتف: 077623634 / 0559043214</p>
-        <p>العنوان: W37R+R6W, شمومة، مستغانم، Mostaganem</p>
-        <p>تابعنا على وسائل التواصل الاجتماعي: 
-            <a href="https://www.facebook.com/benoua27">Facebook</a>, 
-            <a href="https://www.instagram.com/ArabesquePub27/">Instagram</a>, 
-            <a href="https://www.tiktok.com/@ArabesquePub27">TikTok</a>
-        </p>
-    </section>
-
-    <!-- قسم تقديم الشكاوى -->
-    <section id="complaints">
-        <h3>تقديم شكوى</h3>
-        <form id="complaintForm">
-            <label for="name">الاسم:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="phone">رقم الهاتف:</label>
-            <input type="text" id="phone" name="phone" required>
-            <label for="reason">سبب الشكوى:</label>
-            <input type="text" id="reason" name="reason" required>
-            <label for="complaint">نص الشكوى:</label>
-            <textarea id="complaint" name="complaint" required></textarea>
-            <button type="submit">إرسال الشكوى</button>
-        </form>
-        <div id="confirmation" style="display:none;">
-            <p>شكراً لتقديم الشكوى. سنبذل جهدنا لتحسين خدماتنا والاهتمام بملاحظاتك.</p>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+    <script src="scriptComplaints.js"></script>
 </body>
 </html>
